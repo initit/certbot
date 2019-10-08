@@ -16,7 +16,7 @@ AUTH_TOKEN = 'MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw'
 
 class AuthenticatorTest(
     test_util.TempDirTestCase,
-    dns_test_common_lexicon.BaseHostingdeAuthenticatorTest):
+        dns_test_common_lexicon.BaseLexiconAuthenticatorTest):
 
     def setUp(self):
         super(AuthenticatorTest, self).setUp()
@@ -41,7 +41,7 @@ class AuthenticatorTest(
 
 class HostingdeLexiconClientTest(
     unittest.TestCase,
-        dns_test_common_lexicon.BaseHostingdeClientTest):
+        dns_test_common_lexicon.BaseLexiconAuthenticatorTest):
     DOMAIN_NOT_FOUND = HTTPError('404 Client Error: Not Found for url: {0}.'.format(DOMAIN))
     LOGIN_ERROR = HTTPError('401 Client Error: Unauthorized for url: {0}.'.format(DOMAIN))
 
